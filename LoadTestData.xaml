@@ -1,0 +1,206 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LoadTestData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:utat="clr-namespace:UiPath.Testing.Activities.TestData;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="email" Type="InArgument(x:String)" />
+    <x:Property Name="loanAmt" Type="InArgument(x:Decimal)" />
+    <x:Property Name="loanTerm" Type="InArgument(x:String)" />
+    <x:Property Name="yearlyIncome" Type="InArgument(x:Decimal)" />
+    <x:Property Name="age" Type="InArgument(x:Decimal)" />
+  </x:Members>
+  <this:LoadTestData.email>
+    <InArgument x:TypeArguments="x:String" />
+  </this:LoadTestData.email>
+  <this:LoadTestData.loanAmt>
+    <InArgument x:TypeArguments="x:Decimal" />
+  </this:LoadTestData.loanAmt>
+  <this:LoadTestData.loanTerm>
+    <InArgument x:TypeArguments="x:String" />
+  </this:LoadTestData.loanTerm>
+  <this:LoadTestData.yearlyIncome>
+    <InArgument x:TypeArguments="x:Decimal" />
+  </this:LoadTestData.yearlyIncome>
+  <this:LoadTestData.age>
+    <InArgument x:TypeArguments="x:Decimal" />
+  </this:LoadTestData.age>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>934,1448</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>LoadTestData_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Testing.Activities.TestData</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Library_UiBank</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Library_UiBank</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LoadTestData" sap:VirtualizedContainerService.HintSize="584,1283" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="fn" />
+      <Variable x:TypeArguments="x:String" Name="ln" />
+      <Variable x:TypeArguments="x:String" Name="counter" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="542,238" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please enter value" Title="How many test data required">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[counter]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="542,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Adding &quot;+counter+&quot; test data&quot;]" />
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each number of test data required" sap:VirtualizedContainerService.HintSize="542,782" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Enumerable.Range(0,cint(counter)).ToArray()]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="506,648" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="LoadSequence" sap:VirtualizedContainerService.HintSize="464,556" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <utat:GivenName DisplayName="Given Name" GivenNameResult="[fn]" sap:VirtualizedContainerService.HintSize="422,22" sap2010:WorkflowViewState.IdRef="GivenName_1" />
+              <utat:LastName DisplayName="Last Name" sap:VirtualizedContainerService.HintSize="422,22" sap2010:WorkflowViewState.IdRef="LastName_1" LastNameResult="[ln]" />
+              <uta:AddTestDataQueueItem ContinueOnError="{x:Null}" DisplayName="Add Test Data Queue Item" sap:VirtualizedContainerService.HintSize="422,340" sap2010:WorkflowViewState.IdRef="AddTestDataQueueItem_1" QueueName="UiBankLoanTestQueue_Udit" ShowOutputArgumentCheckBoxes="False">
+                <uta:AddTestDataQueueItem.ArgumentsBridgeActivityCollection>
+                  <scg:List x:TypeArguments="ActivityFunc(x:Object)" Capacity="0" />
+                </uta:AddTestDataQueueItem.ArgumentsBridgeActivityCollection>
+                <uta:AddTestDataQueueItem.Items>
+                  <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                    <uta:ActivityItemContainer.Activity>
+                      <Assign DisplayName="Email Address of Requester" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[email]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[fn+ln+"@gmail.com"]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </uta:ActivityItemContainer.Activity>
+                    <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                      <ActivityFunc x:TypeArguments="x:Object">
+                        <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_2" />
+                      </ActivityFunc>
+                    </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                  </uta:ActivityItemContainer>
+                  <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                    <uta:ActivityItemContainer.Activity>
+                      <utat:RandomNumber Decimals="{x:Null}" DisplayName="Loan Amount Requested" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RandomNumber_1" Max="100000" Min="10000" Output="[loanAmt]" />
+                    </uta:ActivityItemContainer.Activity>
+                    <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                      <ActivityFunc x:TypeArguments="x:Object">
+                        <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_3" />
+                      </ActivityFunc>
+                    </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                  </uta:ActivityItemContainer>
+                  <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                    <uta:ActivityItemContainer.Activity>
+                      <utat:RandomValue DisplayName="Loan Term" FilePath="C:\Users\Udit Narayan\Desktop\LoanTerm.csv" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="RandomValue_1" Value="[loanTerm]" />
+                    </uta:ActivityItemContainer.Activity>
+                    <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                      <ActivityFunc x:TypeArguments="x:Object">
+                        <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_4" />
+                      </ActivityFunc>
+                    </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                  </uta:ActivityItemContainer>
+                  <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                    <uta:ActivityItemContainer.Activity>
+                      <utat:RandomNumber Decimals="{x:Null}" DisplayName="Current Yearly Income" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RandomNumber_2" Max="200000" Min="10000" Output="[yearlyIncome]" />
+                    </uta:ActivityItemContainer.Activity>
+                    <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                      <ActivityFunc x:TypeArguments="x:Object">
+                        <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_5" />
+                      </ActivityFunc>
+                    </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                  </uta:ActivityItemContainer>
+                  <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                    <uta:ActivityItemContainer.Activity>
+                      <utat:RandomNumber Decimals="{x:Null}" DisplayName="Age" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RandomNumber_3" Max="80" Min="20" Output="[age]" />
+                    </uta:ActivityItemContainer.Activity>
+                    <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                      <ActivityFunc x:TypeArguments="x:Object">
+                        <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_6" />
+                      </ActivityFunc>
+                    </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                  </uta:ActivityItemContainer>
+                </uta:AddTestDataQueueItem.Items>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uta:AddTestDataQueueItem>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>
